@@ -1,8 +1,13 @@
+const sass = require('@zeit/next-sass')
+const css = require('@zeit/next-css')
+const withOptimizedImages = require('next-optimized-images');
 const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
-const sass = require('@zeit/next-sass');
+const withImages = require('next-images')
 
 module.exports = withPlugins([
-  [sass],
-  [optimizedImages]
+	[sass],
+	[css],
+	[withOptimizedImages],
+	[withImages]
 ]);
+
